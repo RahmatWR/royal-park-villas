@@ -146,4 +146,122 @@
 	.image-luxury {
 		@apply h-full w-full object-cover;
 	}
+
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fade-out {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+
+	@keyframes slide-in-from-right {
+		from {
+			transform: translateX(100%);
+		}
+		to {
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes slide-out-to-right {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(100%);
+		}
+	}
+
+	.animate-in {
+		animation-fill-mode: both;
+	}
+
+	.animate-out {
+		animation-fill-mode: both;
+	}
+
+	.fade-in-0 {
+		animation: fade-in 0.3s ease-out;
+	}
+
+	.fade-out-0 {
+		animation: fade-out 0.2s ease-in;
+	}
+
+	.slide-in-from-right {
+		animation: slide-in-from-right 0.45s ease-out;
+	}
+
+	.slide-out-to-right {
+		animation: slide-out-to-right 0.3s ease-in;
+	}
+	/* ============================= */
+	/* RADIX SHEET ANIMATIONS (v4)   */
+	/* ============================= */
+
+	/* OVERLAY */
+	.sheet-overlay[data-state="open"] {
+		animation: sheetOverlayIn 300ms ease-out forwards;
+	}
+
+	.sheet-overlay[data-state="closed"] {
+		animation: sheetOverlayOut 200ms ease-in forwards;
+	}
+
+	/* CONTENT */
+	.sheet-content[data-state="open"] {
+		animation: sheetContentIn 300ms ease-out forwards;
+	}
+
+	.sheet-content[data-state="closed"] {
+		animation: sheetContentOut 200ms ease-in forwards;
+	}
+
+	/* KEYFRAMES */
+	@keyframes sheetOverlayIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes sheetOverlayOut {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+
+	@keyframes sheetContentIn {
+		from {
+			transform: translateX(100%);
+		}
+		to {
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes sheetContentOut {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(100%);
+		}
+	}
 }
