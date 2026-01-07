@@ -49,7 +49,12 @@ const Hero = () => {
 					ref={imageRef}
 					src={heroImage}
 					alt="Royal Park Villas luxury exterior"
-					className="image-luxury scale-110"
+					fill
+					priority
+					sizes="	(max-width: 768px) 100vw,
+									(max-width: 1280px) 90vw,
+									70vw"
+					className="image-luxury scale-100"
 				/>
 				<div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent" />
 			</div>
